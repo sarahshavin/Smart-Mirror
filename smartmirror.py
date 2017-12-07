@@ -212,7 +212,7 @@ class News(Frame):
     def __init__(self, parent, *args, **kwargs):
         Frame.__init__(self, parent, *args, **kwargs)
         self.config(bg='black')
-        self.title = 'News' # 'News' is more internationally generic
+        self.title = 'Random Fit Generator' # 'News' is more internationally generic
         self.newsLbl = Label(self, text=self.title, font=('Helvetica', medium_text_size), fg="white", bg="black")
         self.newsLbl.pack(side=TOP, anchor=W)
         self.headlinesContainer = Frame(self, bg="black")
@@ -227,7 +227,7 @@ class News(Frame):
             if news_country_code == None:
                 headlines_url = "http://twitrss.me/twitter_user_to_rss/?user=randmfitgneratr"
             else:
-                headlines_url = "http://twitrss.me/twitter_user_to_rss/?user=randmfitgneratr" % news_country_code
+                headlines_url = "http://twitrss.me/twitter_user_to_rss/?user=randmfitgneratr" 
 
             feed = feedparser.parse(headlines_url)
 
@@ -245,7 +245,7 @@ class NewsHeadline(Frame):
     def __init__(self, parent, event_name=""):
         Frame.__init__(self, parent, bg='black')
 
-        image = Image.open("assets/Newspaper.png")
+        image = Image.open("assets/tf.png")
         image = image.resize((25, 25), Image.ANTIALIAS)
         image = image.convert('RGB')
         photo = ImageTk.PhotoImage(image)
