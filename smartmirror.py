@@ -225,9 +225,9 @@ class News(Frame):
             for widget in self.headlinesContainer.winfo_children():
                 widget.destroy()
             if news_country_code == None:
-                headlines_url = "http://twitrss.me/twitter_user_to_rss/?user=randmfitgneratr"
+                headlines_url = "https://twitrss.me/twitter_user_to_rss/?user=randomfitbot"
             else:
-                headlines_url = "http://twitrss.me/twitter_user_to_rss/?user=randmfitgneratr" 
+                headlines_url = "https://twitrss.me/twitter_user_to_rss/?user=randomfitbot"
 
             feed = feedparser.parse(headlines_url)
 
